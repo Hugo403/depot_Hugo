@@ -2,22 +2,18 @@ name: Test PHPCS
 on: [push, pull_request]
 jobs: 
   demo: 
-    name: demo Test PHPCS
+    name: test
     runs-on: ubuntu-latest
     steps:
-      
-name: Checkout repository
+      -name: Checkout repository
       uses: actions/checkout@v2
-
       
-name: Installer PHPCS
+      -name: Installer PHPCS
       run: composer global require "squizlabs/php_codesniffer=*"
-
       
-name: tester PHPCS sur MesDates.php
+      -name: tester PHPCS sur MesDates.php
       run: ~/.composer/vendor/bin/phpcs ./src
-
       
-name: afficher date de demain
+      -name: afficher date de demain
       run: |
         php ./src/MesDates.php
