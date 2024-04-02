@@ -6,14 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -name: Checkout repository
-      uses: actions/checkout@v2
+       uses: actions/checkout@v2
       
       -name: Installer PHPCS
-      run: composer global require "squizlabs/php_codesniffer=*"
+       run: composer global require "squizlabs/php_codesniffer=*"
       
       -name: tester PHPCS sur MesDates.php
-      run: ~/.composer/vendor/bin/phpcs ./src
+        run: ~/.composer/vendor/bin/phpcs ./src
       
       -name: afficher date de demain
-      run: |
-        php ./src/MesDates.php
+        run: |
+          php ./src/MesDates.php
