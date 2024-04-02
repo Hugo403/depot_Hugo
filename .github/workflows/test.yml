@@ -11,7 +11,7 @@ jobs:
         run: composer global require "squizlabs/php_codesniffer=*"
       
       - name: tester PHPCS sur MesDates.php
-        run: ~/.composer/vendor/bin/phpcs ./src
+        run: ~/.composer/vendor/bin/phpcs --standard=PSR1,PSR12 ./src
       
       - name: afficher date de demain
         run: php ./src/TD5.php
