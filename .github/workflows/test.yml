@@ -16,4 +16,4 @@ jobs:
       
       -name: afficher date de demain
         run: |
-          php ./src/MesDates.php
+          php ./src/TD5.php
