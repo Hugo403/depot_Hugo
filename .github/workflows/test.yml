@@ -18,4 +18,4 @@ jobs:
         curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
     - name: Run PHP_CodeSniffer
       run: |
-        php phpcs.phar --standard="${{github.workspace}}/test/phpcs/Symfony"
+        php phpcs.phar --standard = "${{github.workspace}}/test/phpcs/Symfony"
